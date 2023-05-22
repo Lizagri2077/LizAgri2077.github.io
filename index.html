@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="/Users/elizabethadams/Desktop/code copy/html-part-2/views/icon_website_new-01.png"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liz Agri UX UI Portfolio
+  </title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/name-logo-test.svg" alt="logo" width="60%">
+    </div>
+    <nav>
+      <ul>
+        <li class="underline"> <a href="#">UX DESIGN</a>
+        <li class="underline"> <a href="#">UI DESIGN</a>
+        <li class="underline"> <a href="#">XP</a>
+          </li>
+        <a href="#round-img" class="contact-btn">CONTACT</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-left">
+    <h1>UX UI</h1>
+    <h2>DESIGNER</h2>
+    <p>Hi, I'm Liz! I'm a UX/UI Designer with 1+ years experience and 6+ years of experience in fashion design. I have focused my career on problem-solving and creating design solutions. I utilize empathy to mock up experiences that will resonate with users. As a UX UI professional, my goal is to simplify experiences so users can move through their flow with ease while offering small novelty experiences to excite and delight.</p>
+    <button class="cta">Learn More</button>
+  </div>
+
+
+
+  <div class="content-right scroll-container">
+      <div class="scroll-area", id="item1"><img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/background.png" alt="portfolio-img" class="hero-img"></div>
+      <div class="scroll-area", id="item2"><img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/initialsketches.png" alt="portfolio-img" class="hero-img"></div>
+     <div class="scroll-area" , id="item3"><img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/research.png" alt="portfolio-img" class="hero-img"></div>
+    <div class="scroll-area" , id="item4"><img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/UI_design.png" alt="portfolio-img" class="hero-img"></div>
+   </div><br>
+
+    <ul class="container-ellipses" style="padding-left: 4px;" onclick="myfunc()">
+ <li id="btnImg1"><button class="ellipses active" data-scroll="item1"></button></li>
+ <li id="btnImg2"><button class="ellipses" data-scroll="item2"></button></li>
+ <li id="btnImg3"><button class="ellipses" data-scroll="item3"></button></li>
+ <li id="btnImg4"><button class="ellipses" data-scroll="item4"></button></li>
+
+    </ul>
+
+  </main>
+
+  <footer class="scrolling-footer">
+    <center class="footer-color">
+    <h2>ABOUT ME</h2><br>
+    <img id="round-img" src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/Hi_Im_Liz.png" width="20%">
+    <p id="footer-text">My background in Fashion Design taught me a lot about UX UI. I quickly became fascinated with how one's lifestyle greatly impacts what they wear, how they feel empowered, 
+      <br>and how a single shopping experience can impact user retension.<br><br>
+    In fashion design, I was focused on providing comfort, cost savings, and style, but now I can help the designers in highlighting the great work they do by amplifying the shopping experience.<br>
+    </P>
+    <br>
+    <p style="color:black; font-size: small;",>Contact</p>
+    <a href="mailto:ELIZABETH_AGRI@fitnyc.edu" class="icon-btn"><img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/mail_2.svg" width="2%"></a>
+    <a href="https://www.linkedin.com/in/elizabeth-agri/" class="icon-btn"><img src="/Users/elizabethadams/Desktop/code copy/html-part-2/views/linkedin-01.svg"></a>
+  </div>
+  
+  </center>
+    </footer>
+
+<script type="text/javascript">
+
+////javascript for scrolling through 
+const links = document.querySelectorAll(".ellipses");
+links.forEach((item)=>{
+  item.addEventListener("click", ()=>{
+    let el= document.getElementById(item.getAttribute("data-scroll"));
+    el.scrollIntoView({behavior:"smooth", block:"center"})
+
+//icon state 
+links.forEach((thingy)=>{
+  thingy.className="ellipses";
+})
+item.className= "ellipses active";
+  })
+})
+
+  </script>
+</body>
+</html>
